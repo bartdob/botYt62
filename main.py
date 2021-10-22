@@ -17,7 +17,7 @@ driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), c
 counter = 0
 
 
-@sched.scheduled_job('interval', minutes=12)
+@sched.scheduled_job('interval', minutes=9)
 def timed_job():
     global counter
     driver.get("https://www.youtube.com/watch?v=kbuDAYF781Y")
